@@ -1,0 +1,5 @@
+[user]
+	name = George Alegre
+	email = facu.alegre@gmail.com
+[diff]
+	tool = vimdiff

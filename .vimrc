@@ -1,3 +1,7 @@
+let mapleader=","
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -12,7 +16,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'scrooloose/nerdtree'
 Plugin 'keith/swift.vim'
+Plugin 'scrooloose/nerdcommenter'
 map <F3> :NERDTreeToggle<CR>
+Plugin 'tpope/vim-abolish'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -45,7 +51,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-set shell=bash
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set shell=zsh
 
 set showmode
 
@@ -77,5 +85,6 @@ set cursorline
 set colorcolumn=80
 set ruler
 
-colorscheme solarized
 syntax enable
+set background=dark
+colorscheme solarized

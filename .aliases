@@ -1,0 +1,4 @@
+alias cleancompile='grails clean && grails compile'
+alias cleancompileupdate='grails clean && grails compile && grails dbm-update'
+alias gupdate='grails dbm-update'
+alias cs='cd ~/.wine/drive_c/Program\ Files\ \(x86\)/Counter-Strike\ 1.6/; wine hl.exe -game cstrike'
