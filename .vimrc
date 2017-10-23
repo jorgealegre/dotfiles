@@ -19,6 +19,7 @@ Plugin 'keith/swift.vim'
 Plugin 'scrooloose/nerdcommenter'
 map <F3> :NERDTreeToggle<CR>
 Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-fugitive'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -81,6 +82,7 @@ set nobackup
 set noswapfile
 
 set cursorline
+
 
 set colorcolumn=80
 set ruler
