@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/george/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -93,7 +93,7 @@ SAVEHIST=100000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/george/.zshrc'
+zstyle :compinstall filename ~/.zshrc
 
 autoload -Uz compinit
 compinit
@@ -104,20 +104,16 @@ compinit
 # Android
 export ANDROID_HOME=~/Library/Android/sdk
 
-# Postgres
-export PATH=/Library/PostgreSQL/10/bin/:$PATH
-alias postgres.server="sudo -u postgres pg_ctl -D /Library/PostgreSQL/10/data"
-
 # Sdkman
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/george/.sdkman"
-[[ -s "/Users/george/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/george/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR=~/.sdkman
+[[ -s ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh
 
 # Agnoster prompt customization.
 prompt_dir() {
   prompt_segment blue black "%."
 }
-DEFAULT_USER='george'
+DEFAULT_USER='georgealegre'
 prompt_context(){}
 
 # Set VIM as default editor.
