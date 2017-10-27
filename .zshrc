@@ -51,7 +51,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git grails npm osx pod python sudo tmux vi-mode)
+plugins=(git grails npm osx pod python sudo tmux vi-mode docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,6 +104,9 @@ compinit
 # Android
 export ANDROID_HOME=~/Library/Android/sdk
 
+# GWT
+export PATH=/opt/utils/gwt/gwt-2.6.0:$PATH
+
 # Sdkman
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR=~/.sdkman
@@ -113,7 +116,7 @@ export SDKMAN_DIR=~/.sdkman
 prompt_dir() {
   prompt_segment blue black "%."
 }
-DEFAULT_USER='georgealegre'
+DEFAULT_USER='george'
 prompt_context(){}
 
 # Set VIM as default editor.
