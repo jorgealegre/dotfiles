@@ -2,8 +2,7 @@
 
 \pset null 'NULL'
 
-\set PROMPT1 '%[%033[1m%][%/] # '
--- SELECT * FROM<enter>. %R shows what type of input it expects.
+\set PROMPT1 '%[%033[1m%]%M:%> %n@%/%R%#%x '
 \set PROMPT2 '... > '
 
 \timing

@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/george/Work/WSui/src/apps/WSengineScheduler'
 let g:netrw_dirhist_2='/Users/george/Work/WSui/src/apps/WSengine/in_examples'
 let g:netrw_dirhist_3='/Users/george/Work/WSui/src/config'
 let g:netrw_dirhist_4='/Users/george/Work/WSui/src/apps/email'
 let g:netrw_dirhist_5='/Users/george/Work/firmas/mirna-m'
+let g:netrw_dirhist_6='/Users/george/.dotfiles/vim/bundle/Vundle.vim'

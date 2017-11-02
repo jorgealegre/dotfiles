@@ -107,6 +107,9 @@ export ANDROID_HOME=~/Library/Android/sdk
 # GWT
 export PATH=/opt/utils/gwt/gwt-2.6.0:$PATH
 
+# MySQL
+export PATH=/usr/local/mysql/bin:$PATH
+
 # Sdkman
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR=~/.sdkman
