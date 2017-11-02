@@ -101,8 +101,6 @@ compinit
 
 ###############################################################################
 
-# Android
-export ANDROID_HOME=~/Library/Android/sdk
 
 # GWT
 export PATH=/opt/utils/gwt/gwt-2.6.0:$PATH
@@ -119,7 +117,6 @@ export SDKMAN_DIR=~/.sdkman
 prompt_dir() {
   prompt_segment blue black "%."
 }
-DEFAULT_USER='george'
 prompt_context(){}
 
 # Set VIM as default editor.
@@ -128,3 +125,23 @@ export EDITOR="$VISUAL"
 
 source ~/.aliases
 
+# Detect platform.
+platform='unknown'
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    platform='linux'
+
+    DEFAULT_USER='georgealegre'
+    
+    # Android
+    export ANDROID_HOME=~/Android/Sdk
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    platform='macOS'
+    DEFAULT_USER='george'
+
+    # Android
+    export ANDROID_HOME=~/Library/Android/sdk
+else
+    # Unknown.
+    platform='UNKNOWN'
+fi
+echo "Welcome $platform user!"
