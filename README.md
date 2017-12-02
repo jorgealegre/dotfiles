@@ -1,6 +1,8 @@
-# vimrc
-My personal vim configuration.
+# dotfiles
+These are my public configuration files for the various tools I use on every computer. Inspired by [this blog post](https://sanctum.geek.nz/arabesque/managing-dot-files-with-git/). Check out the whole blog for more amazing tips about using a CLI properly.
 
 ## Instructions:
-Copy the `vimrc` file to the HOME directory and add a dot at the beggining of the file name.
-Do the same thing with the `vim` directory.
++ On a new computer, clone this repo to your home directory (consider cloning it into a hidden directory i.e. `git clone https://github.com/georgealegre/dotfiles .dotfiles`).
++ Run the `createLinks.sh` script.
++ List all files in your home directory to verify everything worked.
++ When something is changed, just run `git pull` inside the repository.
