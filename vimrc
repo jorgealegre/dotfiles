@@ -90,3 +90,5 @@ set ruler
 syntax enable
 set background=dark
 colorscheme solarized
+
+set diffopt+=vertical
