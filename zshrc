@@ -132,6 +132,8 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
     DEFAULT_USER='georgealegre'
     
+    export PATH=/usr/local/bin/swift-4.0.3/usr/bin/:"${PATH}"
+    
     # Android
     export ANDROID_HOME=~/Android/Sdk
 elif [[ "$OSTYPE" == "darwin"* ]]; then
