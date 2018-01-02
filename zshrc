@@ -141,7 +141,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     DEFAULT_USER='george'
 
     # Android
-    export ANDROID_HOME=~/Library/Android/sdk
+    export ANDROID_SDK_ROOT=/Users/george/Work/sgv/android-sdk
+    export ANDROID_HOME=ANDROID_SDK_ROOT
 else
     # Unknown.
     platform='UNKNOWN'
