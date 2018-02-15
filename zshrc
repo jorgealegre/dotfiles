@@ -132,8 +132,11 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
     DEFAULT_USER='georgealegre'
     
-    export PATH=/usr/local/bin/swift-4.0.3/usr/bin/:"${PATH}"
-    
+    # Swiftenv
+    export SWIFTENV_ROOT="$HOME/.swiftenv"
+    export PATH="$SWIFTENV_ROOT/bin:$PATH"
+    eval "$(swiftenv init -)"
+
     # Android
     export ANDROID_HOME=~/Android/Sdk
 elif [[ "$OSTYPE" == "darwin"* ]]; then
