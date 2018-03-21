@@ -146,6 +146,14 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Android
     export ANDROID_SDK_ROOT=/Users/george/Work/sgv/android-sdk
     export ANDROID_HOME=ANDROID_SDK_ROOT
+
+    export PATH="/usr/local/opt/llvm/bin:$PATH"
+    export PATH="/usr/local/opt/octave/bin:$PATH"
+
+    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+    export WORKON_HOME=$HOME/.virtualenvsexport
+    PROJECT_HOME=$HOME/Developer
+    source /usr/local/bin/virtualenvwrapper.sh
 else
     # Unknown.
     platform='UNKNOWN'
@@ -154,3 +162,4 @@ echo "Welcome $platform user!"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
