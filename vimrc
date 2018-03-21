@@ -1,5 +1,9 @@
 let mapleader=","
 
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_max_files=50000
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible              " be iMproved, required
