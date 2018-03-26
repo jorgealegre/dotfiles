@@ -6,3 +6,6 @@ These are my public configuration files for the various tools I use on every com
 + Run the `createLinks.sh` script.
 + List all files in your home directory to verify everything worked.
 + When something is changed, just run `git pull` inside the repository.
+
+## Extra stuff
+https://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
