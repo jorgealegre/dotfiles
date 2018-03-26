@@ -17,30 +17,27 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+" Syntax support
 Plugin 'derekwyatt/vim-scala'
-Plugin 'scrooloose/nerdtree'
 Plugin 'keith/swift.vim'
+
+" Easily toggle code comments
 Plugin 'scrooloose/nerdcommenter'
-map <F3> :NERDTreeToggle<CR>
+
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-fugitive'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-" Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Install L9 and avoid a Naming conflict if you've already installed a
-" different version somewhere else.
-" Plugin 'ascenator/L9', {'name': 'newL9'}
+Plugin 'ctrlpvim/ctrlp.vim'
+
+Plugin 'ntpeters/vim-better-whitespace'
+" :StipWhitespace
+
+" Show indent guides
+" :IndentGuidesEnable
+" :IndentGuidesDisable
+" :IndentGuidesToggle
+Plugin 'nathanaelkane/vim-indent-guides'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -57,6 +54,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:indent_guides_enable_on_vim_startup = 1
 
 set shell=zsh
 
