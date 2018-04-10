@@ -150,6 +150,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
     export PATH="/usr/local/opt/llvm/bin:$PATH"
     export PATH="/usr/local/opt/octave/bin:$PATH"
+    export PATH="/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/:$PATH"
+    export PATH="/usr/local/Cellar/gcc@5/5.5.0_2/bin/:$PATH"
+    export PATH="/usr/local/Cellar/gcc@6/6.4.0_2/bin/:$PATH"
 
     export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
     export WORKON_HOME=$HOME/.virtualenvsexport
