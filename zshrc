@@ -167,5 +167,6 @@ echo "Welcome $platform user!"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+setopt HIST_IGNORE_ALL_DUPS
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
