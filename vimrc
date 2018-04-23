@@ -1,19 +1,18 @@
 let mapleader=","
 
+" CtrlP configuration
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_max_files=50000
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
+" Vundle setup
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -52,52 +51,72 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Easily navigate open panes.
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Search and replace the word under the cursor easily.
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+" Sensible splits.
 set splitbelow
 set splitright
 
+" Shell
 set shell=zsh
+set encoding=utf-8
 
 set showmode
 
+" Tabs vs. spaces
 set tabstop=4
 set softtabstop=4
 set expandtab
 set shiftwidth=4
+
+" Easier coding
 set autoindent
+
+" Line number
 set number
+
+" Highlight found searches
 set showmatch
+
+" Case insensitive search
 set ignorecase
 
+" Offset the screen 7 lines when scrolling
 set scrolloff=7
 
 set hlsearch
 set incsearch
 
+" Toggle paste mode when copying large chunks of code from somewhere else.
 set pastetoggle=<F2>
 
 set autoread
 
-set encoding=utf-8
-
+" Don't save backups
 set nobackup
 set noswapfile
 
+" Highlight the current line
 set cursorline
 
-
+" Highlight the 80th column
 set colorcolumn=80
+
 set ruler
 
+" Pretty stuff
 syntax enable
 set background=dark
 colorscheme solarized
 
+" Show diffs in vertical splits
 set diffopt+=vertical
