@@ -132,11 +132,13 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     platform='linux'
 
     DEFAULT_USER='georgealegre'
-    
+
     # Swiftenv
     export SWIFTENV_ROOT="$HOME/.swiftenv"
     export PATH="$SWIFTENV_ROOT/bin:$PATH"
     eval "$(swiftenv init -)"
+
+    export PATH="/usr/local/bin/websocketd:$PATH"
 
     # Android
     export ANDROID_HOME=~/Android/Sdk
