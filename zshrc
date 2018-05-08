@@ -161,9 +161,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     PROJECT_HOME=$HOME/Developer
     source /usr/local/bin/virtualenvwrapper.sh
 
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 else
     # Unknown.
     platform='UNKNOWN'
@@ -176,3 +173,8 @@ export LANG=en_US.UTF-8
 setopt HIST_IGNORE_ALL_DUPS
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Node Version Manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
