@@ -18,14 +18,14 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Syntax support
+Plugin 'vim-syntastic/syntastic'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'keith/swift.vim'
-
-" Easily toggle code comments
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'kballard/vim-swift'
 
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
+
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
@@ -120,3 +120,13 @@ colorscheme solarized
 
 " Show diffs in vertical splits
 set diffopt+=vertical
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
