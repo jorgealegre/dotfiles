@@ -32,6 +32,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 " :StipWhitespace
 
+Plugin 'pangloss/vim-javascript'
+
 " Show indent guides
 " :IndentGuidesEnable
 " :IndentGuidesDisable
