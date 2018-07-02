@@ -42,6 +42,8 @@ Plugin 'pangloss/vim-javascript'
 " :IndentGuidesToggle
 Plugin 'nathanaelkane/vim-indent-guides'
 
+Plugin 'dominikduda/vim_current_word'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -132,3 +134,5 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_c_checkers = ['clang_check']
 
 let g:airline_theme='solarized'
+
+let g:vim_current_word#highlight_current_word = 0
