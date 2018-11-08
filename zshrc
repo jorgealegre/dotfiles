@@ -147,19 +147,26 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     DEFAULT_USER='george'
 
     # Android
-    export ANDROID_SDK_ROOT=/Users/george/Work/sgv/android-sdk
-    export ANDROID_HOME=ANDROID_SDK_ROOT
+    export ANDROID_SDK_ROOT=/Users/george/Library/Android/sdk
+    export ANDROID_HOME=/Users/george/Library/Android/sdk
 
     export PATH="/usr/local/opt/llvm/bin:$PATH"
     export PATH="/usr/local/opt/octave/bin:$PATH"
     export PATH="/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/:$PATH"
     export PATH="/usr/local/Cellar/gcc@5/5.5.0_2/bin/:$PATH"
     export PATH="/usr/local/Cellar/gcc@6/6.4.0_2/bin/:$PATH"
+    export PATH="/usr/local/Cellar/gcc@7/7.3.0/bin/:$PATH"
+    export PATH="/usr/local/Cellar/hwloc/2.0.1/bin/lstopo:$PATH"
+    export PATH="/usr/local/Cellar/ispc/1.9.2/bin/:$PATH"
+    export PATH="/usr/local/opt/sqlite/bin:$PATH"
+    export PATH="$HOME/.fastlane/bin:$PATH"
 
     export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
     export WORKON_HOME=$HOME/.virtualenvsexport
     PROJECT_HOME=$HOME/Developer
     source /usr/local/bin/virtualenvwrapper.sh
+
+    ~/.fastlane/completions/completion.zsh
 
 else
     # Unknown.

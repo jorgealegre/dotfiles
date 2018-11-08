@@ -21,6 +21,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'kballard/vim-swift'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'nvie/vim-flake8'
 
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-fugitive'
@@ -35,6 +37,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 " :StipWhitespace
 
 Plugin 'pangloss/vim-javascript'
+Plugin 'jez/vim-ispc'
 
 " Show indent guides
 " :IndentGuidesEnable
@@ -130,5 +133,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_c_checkers = ['clang_check']
+let g:syntastic_c_checkers = ['swiftlint']
 
 let g:airline_theme='solarized'
+
+let python_highlight_all=1
