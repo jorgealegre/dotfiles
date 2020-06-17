@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -7,7 +14,7 @@ export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +58,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gradle grails npm osx pod python sudo tmux vi-mode docker virtualenv)
+plugins=(git npm osx pod python sudo tmux vi-mode docker virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,23 +109,10 @@ compinit
 ###############################################################################
 
 
-# GWT
-export PATH=/opt/utils/gwt/gwt-2.6.0:$PATH
-
-# MySQL
-export PATH=/usr/local/mysql/bin:$PATH
-
 # Sdkman
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR=~/.sdkman
 [[ -s ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh
-
-# Agnoster prompt customization.
-prompt_dir() {
-  prompt_segment blue black "%."
-}
-prompt_context(){}
-RPROMPT='%*'
 
 # Set VIM as default editor.
 export VISUAL=vim
@@ -144,11 +138,11 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     export ANDROID_HOME=~/Android/Sdk
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     platform='macOS'
-    DEFAULT_USER='george'
+    DEFAULT_USER='jorge'
 
     # Android
-    export ANDROID_SDK_ROOT=/Users/george/Library/Android/sdk
-    export ANDROID_HOME=/Users/george/Library/Android/sdk
+    export ANDROID_SDK_ROOT=/Users/jorge/Library/Android/sdk
+    export ANDROID_HOME=/Users/jorge/Library/Android/sdk
 
     export PATH="/usr/local/opt/llvm/bin:$PATH"
     export PATH="/usr/local/opt/octave/bin:$PATH"
@@ -185,3 +179,6 @@ setopt HIST_IGNORE_ALL_DUPS
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

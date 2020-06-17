@@ -17,12 +17,11 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'altercation/vim-colors-solarized'
+
 " Syntax support
 Plugin 'vim-syntastic/syntastic'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'kballard/vim-swift'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'nvie/vim-flake8'
 
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-fugitive'
@@ -34,18 +33,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'ntpeters/vim-better-whitespace'
-" :StipWhitespace
-
-Plugin 'pangloss/vim-javascript'
-Plugin 'jez/vim-ispc'
-
-" Show indent guides
-" :IndentGuidesEnable
-" :IndentGuidesDisable
-" :IndentGuidesToggle
-Plugin 'nathanaelkane/vim-indent-guides'
-
-Plugin 'dominikduda/vim_current_word'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -130,10 +117,4 @@ colorscheme solarized
 " Show diffs in vertical splits
 set diffopt+=vertical
 
-" Syntastic
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 let g:airline_theme='solarized'
-
-let g:vim_current_word#highlight_current_word = 0
