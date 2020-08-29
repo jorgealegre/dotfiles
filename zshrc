@@ -58,7 +58,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm osx pod python sudo tmux vi-mode docker virtualenv)
+plugins=(git osx pod python sudo tmux vi-mode docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,15 +82,6 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 ###############################################################################
 
 # Lines configured by zsh-newuser-install
@@ -108,12 +99,6 @@ compinit
 
 ###############################################################################
 
-
-# Sdkman
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR=~/.sdkman
-[[ -s ~/.sdkman/bin/sdkman-init.sh ]] && source ~/.sdkman/bin/sdkman-init.sh
-
 # Set VIM as default editor.
 export VISUAL=vim
 export EDITOR="$VISUAL"
@@ -124,25 +109,11 @@ source ~/.aliases
 platform='unknown'
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     platform='linux'
-
     DEFAULT_USER='georgealegre'
 
-    # Swiftenv
-    export SWIFTENV_ROOT="$HOME/.swiftenv"
-    export PATH="$SWIFTENV_ROOT/bin:$PATH"
-    eval "$(swiftenv init -)"
-
-    export PATH="/usr/local/bin/websocketd:$PATH"
-
-    # Android
-    export ANDROID_HOME=~/Android/Sdk
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     platform='macOS'
     DEFAULT_USER='jorge'
-
-    # Android
-    export ANDROID_SDK_ROOT=/Users/jorge/Library/Android/sdk
-    export ANDROID_HOME=/Users/jorge/Library/Android/sdk
 
     export PATH="/usr/local/opt/llvm/bin:$PATH"
     export PATH="/usr/local/opt/octave/bin:$PATH"
@@ -155,10 +126,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="/usr/local/opt/sqlite/bin:$PATH"
     export PATH="$HOME/.fastlane/bin:$PATH"
 
-    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-    export WORKON_HOME=$HOME/.virtualenvsexport
     PROJECT_HOME=$HOME/Developer
-    source /usr/local/bin/virtualenvwrapper.sh
 
     ~/.fastlane/completions/completion.zsh
 
@@ -174,11 +142,6 @@ export LANG=en_US.UTF-8
 setopt HIST_IGNORE_ALL_DUPS
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Node Version Manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
