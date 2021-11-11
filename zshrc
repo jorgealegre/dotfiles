@@ -58,7 +58,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx pod python sudo tmux vi-mode docker)
+plugins=(git macos pod python sudo tmux vi-mode docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,36 +105,27 @@ export EDITOR="$VISUAL"
 
 source ~/.aliases
 
-# Detect platform.
-platform='unknown'
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    platform='linux'
-    DEFAULT_USER='georgealegre'
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH="/usr/local/opt/octave/bin:$PATH"
+export PATH="/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/:$PATH"
+export PATH="/usr/local/Cellar/gcc@5/5.5.0_2/bin/:$PATH"
+export PATH="/usr/local/Cellar/gcc@6/6.4.0_2/bin/:$PATH"
+export PATH="/usr/local/Cellar/gcc@7/7.3.0/bin/:$PATH"
+export PATH="/usr/local/Cellar/hwloc/2.0.1/bin/lstopo:$PATH"
+export PATH="/usr/local/Cellar/ispc/1.9.2/bin/:$PATH"
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+export PATH="$HOME/.fastlane/bin:$PATH"
 
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    platform='macOS'
-    DEFAULT_USER='jorge'
+PROJECT_HOME=$HOME/Developer
 
-    export PATH="/usr/local/opt/llvm/bin:$PATH"
-    export PATH="/usr/local/opt/octave/bin:$PATH"
-    export PATH="/usr/local/Cellar/gcc@4.9/4.9.4_1/bin/:$PATH"
-    export PATH="/usr/local/Cellar/gcc@5/5.5.0_2/bin/:$PATH"
-    export PATH="/usr/local/Cellar/gcc@6/6.4.0_2/bin/:$PATH"
-    export PATH="/usr/local/Cellar/gcc@7/7.3.0/bin/:$PATH"
-    export PATH="/usr/local/Cellar/hwloc/2.0.1/bin/lstopo:$PATH"
-    export PATH="/usr/local/Cellar/ispc/1.9.2/bin/:$PATH"
-    export PATH="/usr/local/opt/sqlite/bin:$PATH"
-    export PATH="$HOME/.fastlane/bin:$PATH"
+~/.fastlane/completions/completion.zsh
 
-    PROJECT_HOME=$HOME/Developer
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
-    ~/.fastlane/completions/completion.zsh
-
-else
-    # Unknown.
-    platform='UNKNOWN'
+    autoload -Uz compinit
+    compinit
 fi
-echo "Welcome $platform user!"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -145,3 +136,6 @@ setopt HIST_IGNORE_ALL_DUPS
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+PATH="/usr/local/bin:$PATH"
+# export PATH="/usr/local/opt/ruby/bin:$PATH"

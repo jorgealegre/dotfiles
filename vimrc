@@ -22,6 +22,7 @@ Plugin 'altercation/vim-colors-solarized'
 " Syntax support
 Plugin 'vim-syntastic/syntastic'
 Plugin 'kballard/vim-swift'
+Plugin 'dart-lang/dart-vim-plugin'
 
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-fugitive'
@@ -81,7 +82,7 @@ set autoindent
 set number
 
 " Highlight found searches
-set showmatch
+" set showmatch
 
 " Case insensitive search
 set ignorecase
