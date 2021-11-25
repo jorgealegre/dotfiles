@@ -12,6 +12,7 @@ These are my public configuration files for the various tools I use on every com
 + Download and install [iTerm 2](https://iterm2.com/downloads.html).
 + Install [Homebrew](https://brew.sh)
 + Update vim and install tmux with `$ brew install vim tmux`.
++ Enable key repeat with `$ defaults write -g ApplePressAndHoldEnabled -bool false`.
 
 ## Extra stuff
 https://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
