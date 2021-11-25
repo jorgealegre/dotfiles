@@ -12,6 +12,11 @@ These are my public configuration files for the various tools I use on every com
 + Download and install [iTerm 2](https://iterm2.com/downloads.html).
 + Install [Homebrew](https://brew.sh)
 + Update vim and install tmux with `$ brew install vim tmux`.
++ Install **[Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)**.
++ Change Mac's network name.
++ Configure GitHub SSH keys and configure `.ssh/config`
++ Install [Tmux TPM](https://github.com/tmux-plugins/tpm).
++ Install [Vim Vundle](https://github.com/VundleVim/Vundle.vim).
 + Enable key repeat with `$ defaults write -g ApplePressAndHoldEnabled -bool false`.
 + Add firmware password.
 
