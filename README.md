@@ -7,5 +7,11 @@ These are my public configuration files for the various tools I use on every com
 + List all files in your home directory to verify everything worked.
 + When something is changed, just run `git pull` inside the repository.
 
+## New computer setup
++ Download and install Xcode from Apple's [developer website](https://developer.apple.com/download/all/?q=xcode). Install additional tools when opening for the first time.
++ Download and install [iTerm 2](https://iterm2.com/downloads.html).
++ Install [Homebrew](https://brew.sh)
++ Update vim and install tmux with `$ brew install vim tmux`.
+
 ## Extra stuff
 https://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
