@@ -15,6 +15,8 @@ These are my public configuration files for the various tools I use on every com
 + Install **[Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)**.
 + Change Mac's network name.
 + Configure GitHub SSH keys and configure `.ssh/config`
++ Install [Tmux TPM](https://github.com/tmux-plugins/tpm).
++ Install [Vim Vundle](https://github.com/VundleVim/Vundle.vim).
 + Enable key repeat with `$ defaults write -g ApplePressAndHoldEnabled -bool false`.
 + Add firmware password.
 
