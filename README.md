@@ -13,6 +13,7 @@ These are my public configuration files for the various tools I use on every com
 + Install [Homebrew](https://brew.sh)
 + Update vim and install tmux with `$ brew install vim tmux`.
 + Enable key repeat with `$ defaults write -g ApplePressAndHoldEnabled -bool false`.
++ Add firmware password.
 
 ## Extra stuff
 https://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
