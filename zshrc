@@ -105,8 +105,6 @@ export EDITOR="$VISUAL"
 
 source ~/.aliases
 
-export PATH="$HOME/.fastlane/bin:$PATH"
-
 PROJECT_HOME=$HOME/Developer
 
 export LC_ALL=en_US.UTF-8
@@ -120,3 +118,9 @@ setopt HIST_IGNORE_ALL_DUPS
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH="/opt/homebrew/bin:$PATH"
+
+. ~/.fastlane/completions/completion.sh
+
+source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.2.3
