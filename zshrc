@@ -58,7 +58,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos pod python sudo tmux vi-mode docker)
+plugins=(git macos pod python sudo tmux vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,9 +118,28 @@ setopt HIST_IGNORE_ALL_DUPS
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/Users/jorge/go/bin/:$PATH"
+export PATH="/Users/jorge/.mint/bin/:$PATH"
 
 . ~/.fastlane/completions/completion.sh
 
-source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
-source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.2.3
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+# Added by Antigravity
+export PATH="/Users/jorge/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+
+# bun completions
+[ -s "/Users/jorge/.oh-my-zsh/completions/_bun" ] && source "/Users/jorge/.oh-my-zsh/completions/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+

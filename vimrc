@@ -19,6 +19,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'altercation/vim-colors-solarized'
 
+Plugin 'chaoren/vim-wordmotion'
+
 " Syntax support
 Plugin 'vim-syntastic/syntastic'
 Plugin 'kballard/vim-swift'
@@ -34,6 +36,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
 
 Plugin 'ntpeters/vim-better-whitespace'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -66,6 +69,7 @@ set splitright
 " Shell
 set shell=zsh
 set encoding=utf-8
+set clipboard=unnamed
 
 set showmode
 
